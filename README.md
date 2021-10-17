@@ -1,19 +1,7 @@
 # ELK Demo
-Для выполнения требуется наличие Mac/Linux с установленным Docker.
+Отчёт по [домашнему заданию по ELK](https://github.com/Gorini4/elk_demo).
 
-## Что нужно сделать
-1. Написать конфигурацию Logstash для загрузки данных в ElasticSearch.
-1. Построить отчет в Kibana на основе этих данных.
+[Кофигурация logstash](https://github.com/asergeenko/otus_elk/blob/main/logstash/clickstream.conf).
 
-## Инструкция
-1. Склонируйте репозиторий в директорию `elk_demo`
-1. Зайдите в эту директорию и разверните инфраструктуру, выполнив в терминале `docker-compose up`
-1. Отредактируйте файл `clickstream.conf`
-1. Загрузите данные веб-логов, выполнив команду `./load_data.sh`
-1. Перейдите по адресу http://localhost:5601 и создайте отчет (dashboard), показывающий распределение запросов с разными кодами ответов (status_code) по времени
-
-## Подсказки
-- Пример конфигурации можно подсмотреть здесь - https://dzone.com/articles/logstash-elasticsearch-and
-- Для добавления данных в Kibana нужно сначала создать Index Pattern, по которому будут подгружаться индексы из ES
-
-> Упражнение разработано в рамках курса [OTUS / Data Engineer](https://otus.ru/lessons/data-engineer/)
+#### Распределение **status_code** во времени
+<img src="https://github.com/asergeenko/otus_elk/raw/main/screenshots/stat_code_distribution.jpg" width="800"/>
